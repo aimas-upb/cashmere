@@ -1,0 +1,35 @@
+/*
+    cashmere_demo
+    ---------------------------
+
+    JaCaMo Application File
+
+    This file defines the initial state of the MAS (initial agents, environment, organisation, ....)
+
+    (see jacamo/doc/jcm.html for more information about what can be defined in this file)
+
+    JaCaMo 1.1
+    April 25, 2023 - 16:42:34
+*/
+
+mas cashmere_demo {
+
+    agent test_agent {
+      
+    }
+
+
+    // agent node_manager
+    // agent simple_agent
+    /*
+    workspace w {
+      artifact c1: example.Counter(3) 
+    }
+    */
+    
+    asl-path: src/agt
+
+    // java class path
+    class-path: "target/classes/*:/home/alex/.m2/repository/org/jacamo/moise/1.0/moise-1.0.jar:/home/alex/.m2/repository/org/jason/jason/3.1/jason-3.1.jar:/home/alex/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/home/alex/.m2/repository/org/apache/httpcomponents/httpcore-osgi/4.4.4/httpcore-osgi-4.4.4.jar:/home/alex/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/home/alex/.m2/repository/net/sf/ingenias/jade/4.3/jade-4.3.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-sail-inferencer/2.2.2/rdf4j-sail-inferencer-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-http-client/2.2.2/rdf4j-http-client-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-rio-jsonld/2.2.2/rdf4j-rio-jsonld-2.2.2.jar:/home/alex/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/home/alex/.m2/repository/org/apache/httpcomponents/httpclient-osgi/4.5.2/httpclient-osgi-4.5.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-rio-rdfxml/2.2.2/rdf4j-rio-rdfxml-2.2.2.jar:/home/alex/.m2/repository/org/jacamo/cartago/3.1/cartago-3.1.jar:/home/alex/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar:/home/alex/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-rio-nquads/2.2.2/rdf4j-rio-nquads-2.2.2.jar:/home/alex/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-sail-memory/2.2.2/rdf4j-sail-memory-2.2.2.jar:/home/alex/.m2/repository/org/apache/httpcomponents/httpcore-nio/4.4.4/httpcore-nio-4.4.4.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-sail-model/2.2.2/rdf4j-sail-model-2.2.2.jar:/home/alex/.m2/repository/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-rio-turtle/2.2.2/rdf4j-rio-turtle-2.2.2.jar:/home/alex/.m2/repository/com/github/jsonld-java/jsonld-java/0.8.3/jsonld-java-0.8.3.jar:/home/alex/.m2/repository/org/eclipse/jetty/aggregate/jetty-all/9.0.0.RC2/jetty-all-9.0.0.RC2.jar:/home/alex/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-rio-ntriples/2.2.2/rdf4j-rio-ntriples-2.2.2.jar:/home/alex/.m2/repository/org/apache/httpcomponents/fluent-hc/4.5.2/fluent-hc-4.5.2.jar:/home/alex/.m2/repository/org/apache/commons/commons-rdf-simple/0.5.0/commons-rdf-simple-0.5.0.jar:/home/alex/.m2/repository/org/jacamo/npl/0.5/npl-0.5.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-queryresultio-api/2.2.2/rdf4j-queryresultio-api-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-repository-api/2.2.2/rdf4j-repository-api-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-queryalgebra-model/2.2.2/rdf4j-queryalgebra-model-2.2.2.jar:/home/alex/.m2/repository/org/apache/commons/commons-rdf-rdf4j/0.5.0/commons-rdf-rdf4j-0.5.0.jar:/home/alex/.m2/repository/org/jacamo/jaca/3.1/jaca-3.1.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-queryalgebra-evaluation/2.2.2/rdf4j-queryalgebra-evaluation-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-rio-api/2.2.2/rdf4j-rio-api-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-queryparser-sparql/2.2.2/rdf4j-queryparser-sparql-2.2.2.jar:/home/alex/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-repository-sail/2.2.2/rdf4j-repository-sail-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-sail-api/2.2.2/rdf4j-sail-api-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-util/2.2.2/rdf4j-util-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-queryparser-api/2.2.2/rdf4j-queryparser-api-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-model/2.2.2/rdf4j-model-2.2.2.jar:/home/alex/.m2/repository/org/mapdb/mapdb/1.0.8/mapdb-1.0.8.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-http-protocol/2.2.2/rdf4j-http-protocol-2.2.2.jar:/home/alex/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.5.2/httpclient-cache-4.5.2.jar:/home/alex/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/alex/.m2/repository/org/apache/commons/commons-rdf-api/0.5.0/commons-rdf-api-0.5.0.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-rio-trig/2.2.2/rdf4j-rio-trig-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-repository-sparql/2.2.2/rdf4j-repository-sparql-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-queryresultio-sparqlxml/2.2.2/rdf4j-queryresultio-sparqlxml-2.2.2.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-sail-base/2.2.2/rdf4j-sail-base-2.2.2.jar:/home/alex/.m2/repository/org/jacamo/intmas/1.0.0/intmas-1.0.0.jar:/home/alex/.m2/repository/org/jacamo/sai/0.5.1/sai-0.5.1.jar:/home/alex/.m2/repository/org/eclipse/rdf4j/rdf4j-query/2.2.2/rdf4j-query-2.2.2.jar"
+    
+}
